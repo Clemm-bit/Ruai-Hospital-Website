@@ -1,0 +1,263 @@
+.navbar {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.06);
+}
+
+/* Top Row: Centered Logo */
+.navbar-brand-row {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  text-decoration: none;
+  color: #0f3d68;
+}
+
+.brand-logo {
+  width: 48px;
+  height: 48px;
+  background-color: #0f5298;
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.5px;
+}
+
+.brand-text {
+  text-align: left;
+}
+
+.brand-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  color: #0f3d68;
+  line-height: 1.2;
+}
+
+.brand-tagline {
+  font-size: 0.85rem;
+  color: #475569;
+  font-weight: 500;
+}
+
+.mobile-menu-btn {
+  display: none;
+  position: absolute;
+  right: 1.5rem;
+  background: none;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  padding: 0.4rem 0.7rem;
+  font-size: 1.25rem;
+  color: #0f3d68;
+  cursor: pointer;
+}
+
+/* Bottom Row: Centered Navigation Links */
+.navbar-nav {
+  background-color: #0f5298;
+}
+
+.nav-list {
+  list-style: none;
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.nav-link {
+  display: inline-block;
+  padding: 0.85rem 1.1rem;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: background-color 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  background-color: #09386b;
+}
+
+.dropdown-arrow {
+  background: none;
+  border: none;
+  color: #ffffff;
+  padding: 0.85rem 0.6rem 0.85rem 0;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+/* First-Level Dropdown Box */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 220px;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-top: 3px solid #0f5298;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.12);
+  list-style: none;
+  padding: 0.4rem 0;
+  z-index: 1001;
+}
+
+.dropdown-menu.dropdown-right {
+  left: auto;
+  right: 0;
+}
+
+.nav-item.open > .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 0.65rem 1.1rem;
+  color: #1e293b;
+  text-decoration: none;
+  font-size: 0.92rem;
+  font-weight: 500;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #eff6ff;
+  color: #0f5298;
+}
+
+/* Second-Level Flyout Box (Our Services -> Clinical / Support) */
+.dropdown-sub-item {
+  position: relative;
+}
+
+.sub-trigger-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sub-trigger-wrapper a {
+  flex: 1;
+}
+
+.sub-arrow {
+  background: none;
+  border: none;
+  color: #475569;
+  padding: 0.65rem 0.9rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.flyout-menu {
+  display: none;
+  position: absolute;
+  top: -0.4rem;
+  left: 100%;
+  min-width: 200px;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-left: 3px solid #0f5298;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.12);
+  list-style: none;
+  padding: 0.4rem 0;
+  z-index: 1002;
+}
+
+.dropdown-sub-item.sub-open > .flyout-menu {
+  display: block;
+}
+
+/* Mobile Responsive View */
+@media (max-width: 860px) {
+  .navbar-brand-row {
+    justify-content: flex-start;
+  }
+
+  .mobile-menu-btn {
+    display: block;
+  }
+
+  .navbar-nav {
+    display: none;
+    background-color: #ffffff;
+    border-top: 1px solid #e2e8f0;
+  }
+
+  .navbar-nav.is-open {
+    display: block;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .nav-link-wrapper {
+    justify-content: space-between;
+    border-bottom: 1px solid #f1f5f9;
+  }
+
+  .nav-link {
+    color: #0f3d68;
+    flex: 1;
+  }
+
+  .nav-link:hover,
+  .nav-link.active {
+    background-color: #eff6ff;
+    color: #0f5298;
+  }
+
+  .dropdown-arrow {
+    color: #0f3d68;
+    padding: 0.85rem 1.25rem;
+  }
+
+  .dropdown-menu,
+  .flyout-menu {
+    position: static;
+    box-shadow: none;
+    border: none;
+    border-left: 3px solid #0f5298;
+    border-radius: 0;
+    margin-left: 1rem;
+    background-color: #f8fafc;
+  }
+}
