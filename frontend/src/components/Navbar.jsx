@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import rfhLogo from '../assets/ruaiHospitalLogo.jpeg';
 import './Navbar.css';
 
 export default function Navbar() {
@@ -23,11 +24,14 @@ export default function Navbar() {
       {/* Top Row: Centered Logo & Mobile Hamburger */}
       <div className="navbar-brand-row">
         <Link to="/" className="navbar-brand" onClick={closeAllMenus}>
-          <div className="brand-logo" aria-hidden="true">RFH</div>
-          <div className="brand-text">
-            <h1 className="brand-title">RUAI FAMILY HOSPITAL</h1>
-            <p className="brand-tagline">Caring for a Healthier Community</p>
-          </div>
+        
+            <img
+            src={rfhLogo}
+            alt="Ruai Family Hospital Logo"
+            className="brand-logo-img"
+            />
+          
+          
         </Link>
 
         <button

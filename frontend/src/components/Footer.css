@@ -16,8 +16,7 @@
   font-size: 0.9rem;
 }
 
-.footer-links,
-.footer-socials {
+.footer-links {
   display: flex;
   flex-wrap: wrap;
   gap: 1.25rem;
@@ -39,4 +38,46 @@
   border-left: 1px solid #475569;
   padding-left: 1.25rem;
   color: #93c5fd;
+}
+
+.footer-socials {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.social-icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  color: #ffffff;
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.social-icon-link:hover {
+  transform: translateY(-2px) scale(1.06);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  filter: brightness(1.08);
+}
+
+/* WhatsApp Official Green */
+.whatsapp-link {
+  background-color: #25d366;
+}
+
+/* X (Twitter) Official Black */
+.twitter-link {
+  background-color: #000000;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+/* Facebook Official Blue */
+.facebook-link {
+  background-color: #1877f2;
+  border: 1px solid rgba(255, 255, 255, 0.25);
 }
