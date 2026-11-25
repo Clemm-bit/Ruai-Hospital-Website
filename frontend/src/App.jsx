@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import Contact from './pages/Contact';
+import ContactFormPage from './pages/ContactFormPage';
 import './App.css';
 
 function ScrollToHash() {
@@ -46,6 +47,8 @@ export default function App() {
             <Route path="/patients-visitors" element={<PlaceholderPage title="Patients & Visitors Guide" />} />
             <Route path="/careers" element={<PlaceholderPage title="Careers & Internships" />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/contact/feedback" element={<ContactFormPage mode="feedback" />} />
+            <Route path="/contact/concern" element={<ContactFormPage mode="concern" />} />
             <Route path="/admin/login" element={<PlaceholderPage title="Hospital Staff Administration Login" />} />
           </Routes>
         </main>

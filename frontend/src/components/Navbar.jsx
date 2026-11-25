@@ -240,9 +240,9 @@ export default function Navbar() {
               </button>
             </div>
             <ul className="dropdown-menu dropdown-right">
-              <li><Link to="/contact#contact-info" onClick={closeAllMenus}>Contact Details &amp; Form</Link></li>
-              <li><Link to="/contact#report-concern" onClick={closeAllMenus}>Report a Concern</Link></li>
-              <li><Link to="/contact#feedback" onClick={closeAllMenus}>Feedback</Link></li>
+              <li><Link to="/contact" onClick={closeAllMenus}>Contact Details &amp; Form</Link></li>
+              <li><Link to="/contact/concern" onClick={closeAllMenus}>Report a Concern</Link></li>
+              <li><Link to="/contact/feedback" onClick={closeAllMenus}>Feedback</Link></li>
               <li><Link to="/contact#branches" onClick={closeAllMenus}>Branches</Link></li>
             </ul>
           </li>
