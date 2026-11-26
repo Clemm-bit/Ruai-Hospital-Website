@@ -1,0 +1,445 @@
+.home-page {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* =========================================
+   LAYER 1: Hero Carousel
+   ========================================= */
+.hero-carousel {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  background-color: #09386b;
+}
+
+.carousel-track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.65s ease-in-out;
+}
+
+.carousel-slide {
+  position: relative;
+  min-width: 100%;
+  height: 100%;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.carousel-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(9, 43, 82, 0.82) 0%,
+    rgba(9, 43, 82, 0.45) 60%,
+    rgba(9, 43, 82, 0.25) 100%
+  );
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 50%;
+  left: 8%;
+  transform: translateY(-50%);
+  max-width: 620px;
+  color: #ffffff;
+  z-index: 2;
+}
+
+.carousel-tag {
+  display: inline-block;
+  background-color: #0f5298;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0.35rem 0.85rem;
+  border-radius: 20px;
+  margin-bottom: 0.9rem;
+}
+
+.carousel-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 0.85rem;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-desc {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #f1f5f9;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+  background-color: rgba(15, 82, 152, 0.75);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  font-size: 1.15rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+.carousel-btn:hover {
+  background-color: #0f5298;
+}
+
+.carousel-btn.prev {
+  left: 1.25rem;
+}
+
+.carousel-btn.next {
+  right: 1.25rem;
+}
+
+.carousel-dots {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.6rem;
+  z-index: 3;
+}
+
+.carousel-dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.45);
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.carousel-dot.active {
+  background-color: #ffffff;
+  transform: scale(1.2);
+}
+
+/* =========================================
+   SHARED LAYER WRAPPERS
+   ========================================= */
+.home-layer {
+  padding: 4rem 1.5rem;
+  width: 100%;
+}
+
+.layer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.layer-header {
+  text-align: center;
+  margin-bottom: 2.75rem;
+}
+
+.layer-header h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #0f3d68;
+  margin-bottom: 0.5rem;
+}
+
+.layer-header p {
+  color: #475569;
+  font-size: 1.02rem;
+}
+
+/* =========================================
+   LAYER 2: Our Services (Single Row)
+   ========================================= */
+.services-layer {
+  background-color: #ffffff;
+}
+
+.services-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.75rem;
+}
+
+.service-item-card {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 2rem 1.4rem;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.service-item-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(15, 82, 152, 0.1);
+  border-color: #93c5fd;
+}
+
+.service-icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background-color: #eff6ff;
+  color: #0f5298;
+  margin-bottom: 1.1rem;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.service-icon-link:hover {
+  background-color: #0f5298;
+  color: #ffffff;
+  transform: scale(1.06);
+}
+
+.service-item-card h3 {
+  margin-bottom: 0.65rem;
+  font-size: 1.25rem;
+}
+
+.service-title-link {
+  color: #0f3d68;
+  text-decoration: none;
+  font-weight: 700;
+  transition: color 0.15s ease;
+}
+
+.service-title-link:hover {
+  color: #0f5298;
+  text-decoration: underline;
+}
+
+.service-item-card p {
+  color: #475569;
+  font-size: 0.93rem;
+  line-height: 1.6;
+}
+
+/* =========================================
+   LAYER 3: Leadership (Sideways Scroll Row)
+   ========================================= */
+.leaders-layer {
+  background-color: #f1f5f9;
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.layer-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.layer-header-row h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #0f3d68;
+  margin-bottom: 0.4rem;
+}
+
+.layer-header-row p {
+  color: #475569;
+  font-size: 1.02rem;
+}
+
+.leaders-scroll-controls {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.scroll-arrow-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #cbd5e1;
+  background-color: #ffffff;
+  color: #0f3d68;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.scroll-arrow-btn:hover {
+  background-color: #0f5298;
+  color: #ffffff;
+  border-color: #0f5298;
+}
+
+.leaders-horizontal-track {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 1rem;
+  scrollbar-width: thin;
+  scrollbar-color: #94a3b8 #e2e8f0;
+}
+
+.leaders-horizontal-track::-webkit-scrollbar {
+  height: 7px;
+}
+
+.leaders-horizontal-track::-webkit-scrollbar-track {
+  background: #e2e8f0;
+  border-radius: 10px;
+}
+
+.leaders-horizontal-track::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border-radius: 10px;
+}
+
+.leader-card {
+  flex: 0 0 245px;
+  scroll-snap-align: start;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.25rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.leader-card:hover {
+  transform: translateY(-3px);
+}
+
+.leader-photo-wrap {
+  width: 140px;
+  height: 140px;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #0f5298;
+}
+
+.leader-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.leader-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0f3d68;
+  margin-bottom: 0.25rem;
+}
+
+.leader-role {
+  font-size: 0.88rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+/* =========================================
+   LAYER 4: About Us Stats Layer
+   ========================================= */
+.stats-layer {
+  background-color: #0f5298;
+  color: #ffffff;
+}
+
+.stats-header h2 {
+  color: #ffffff;
+}
+
+.stats-header p {
+  color: #dbeafe;
+}
+
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  text-align: center;
+}
+
+.stat-item {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 2.25rem 1.5rem;
+}
+
+.stat-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  color: #0f5298;
+  margin-bottom: 1rem;
+}
+
+.stat-value {
+  font-size: 2.4rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 0.45rem;
+}
+
+.stat-label {
+  font-size: 1.05rem;
+  color: #e0f2fe;
+  font-weight: 600;
+}
+
+/* =========================================
+   Responsive Breakpoints
+   ========================================= */
+@media (max-width: 960px) {
+  .services-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-carousel {
+    height: 400px;
+  }
+
+  .carousel-title {
+    font-size: 1.75rem;
+  }
+
+  .services-row,
+  .stats-row {
+    grid-template-columns: 1fr;
+  }
+
+  .layer-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
