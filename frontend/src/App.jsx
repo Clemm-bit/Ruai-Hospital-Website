@@ -5,6 +5,8 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import Contact from './pages/Contact';
 import ContactFormPage from './pages/ContactFormPage';
+import About from './pages/About';
+import Services from './pages/Services';
 import './App.css';
 
 function ScrollToHash() {
@@ -40,8 +42,8 @@ export default function App() {
         <main className="app-main">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/about" element={<PlaceholderPage title="About Ruai Family Hospital" />} />
-            <Route path="/services" element={<PlaceholderPage title="Our Services Overview" />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/services" element={<Services />} />
             <Route path="/services/clinical" element={<PlaceholderPage title="Clinical Services" />} />
             <Route path="/services/support" element={<PlaceholderPage title="Support Services" />} />
             <Route path="/patients-visitors" element={<PlaceholderPage title="Patients & Visitors Guide" />} />
