@@ -29,22 +29,32 @@ function ServiceGroup({ title, category }) {
   )
 }
 
-function Services() {
+function Services({ category }) {
+  const showClinical = !category || category === 'clinical'
+  const showSupport = !category || category === 'support'
+  const jumpLinks = services.filter(
+    (s) => !category || s.category.toLowerCase() === category
+  )
+  const heading =
+    category === 'clinical' ? 'Clinical Services'
+    : category === 'support' ? 'Support Services'
+    : 'Our Services'
+
   return (
     <main className="svc-page">
       <header className="svc-hero">
-        <h1>Our Services</h1>
+        <h1>{heading}</h1>
         <p>Quality healthcare delivered by qualified and experienced professionals.</p>
       </header>
 
       <nav className="svc-jump" aria-label="Jump to a service">
-        {services.map((s) => (
+        {jumpLinks.map((s) => (
           <a href={`#${s.id}`} key={s.id}>{s.name}</a>
         ))}
       </nav>
 
-      <ServiceGroup title="Clinical Services" category="Clinical" />
-      <ServiceGroup title="Support Services" category="Support" />
+      {showClinical && <ServiceGroup title="Clinical Services" category="Clinical" />}
+      {showSupport && <ServiceGroup title="Support Services" category="Support" />}
     </main>
   )
 }

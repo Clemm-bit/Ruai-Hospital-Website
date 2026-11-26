@@ -44,8 +44,8 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
-            <Route path="/services/clinical" element={<PlaceholderPage title="Clinical Services" />} />
-            <Route path="/services/support" element={<PlaceholderPage title="Support Services" />} />
+<Route path="/services/clinical" element={<Services category="clinical" />} />
+<Route path="/services/support" element={<Services category="support" />} />
             <Route path="/patients-visitors" element={<PlaceholderPage title="Patients & Visitors Guide" />} />
             <Route path="/careers" element={<PlaceholderPage title="Careers & Internships" />} />
             <Route path="/contact" element={<Contact />} />
